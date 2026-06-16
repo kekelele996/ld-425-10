@@ -14,7 +14,7 @@ export const useConstructionStore = create<ConstructionState>((set, get) => ({
     set({ nodes: await constructionApi.list() });
   },
   async inspectNode(id, passed) {
-    await constructionApi.inspect(id, passed ? 'Failed' : 'Passed', passed ? '现场验收通过' : '需整改后复验', []);
+    await constructionApi.inspect(id, passed ? 'Passed' : 'Failed', passed ? '现场验收通过' : '需整改后复验', []);
     await get().fetchNodes();
   }
 }));

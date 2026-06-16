@@ -15,6 +15,6 @@ export const useMaterialStore = create<MaterialState>((set, get) => ({
   },
   async updateStatus(id, status) {
     await materialApi.updateStatus(id, status);
-    set({ materials: get().materials });
+    await get().fetchMaterials();
   }
 }));

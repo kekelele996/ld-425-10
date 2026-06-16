@@ -16,7 +16,7 @@ export function BudgetManage() {
 
   const totalBudget = budgets.reduce((sum, item) => sum + Number(item.budgetAmount), 0);
   const totalActual = budgets.reduce((sum, item) => sum + Number(item.actualCost), 0);
-  const overBudget = budgets.filter((item) => Number(item.variance) < 0);
+  const overBudget = budgets.filter((item) => Number(item.variance) > 0);
 
   return (
     <div>

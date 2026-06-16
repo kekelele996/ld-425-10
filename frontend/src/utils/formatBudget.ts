@@ -4,5 +4,5 @@ export function formatBudget(value: number) {
 
 export function getVarianceRate(budgetAmount: number, actualCost: number) {
   if (!budgetAmount) return 0;
-  return Math.round(((budgetAmount - actualCost) / budgetAmount) * 100);
+  return Math.round((actualCost / budgetAmount) * 100);
 }
