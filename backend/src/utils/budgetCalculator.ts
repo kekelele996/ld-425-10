@@ -1,5 +1,5 @@
 export function calculateVariance(budgetAmount: number, actualCost: number) {
-  return Number((actualCost - budgetAmount).toFixed(2));
+  return Number((budgetAmount - actualCost).toFixed(2));
 }
 
 export function calculateMaterialTotal(quantity: number, unitPrice: number) {
